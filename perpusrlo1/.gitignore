@@ -1,0 +1,26 @@
+# PHP
+/vendor/
+composer.lock
+
+# Config
+config/database.php
+
+# Uploads
+public/uploads/*
+!public/uploads/.gitkeep
+public/assets/images/covers/*
+!public/assets/images/covers/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

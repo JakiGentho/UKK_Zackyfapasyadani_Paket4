@@ -1,0 +1,65 @@
+perpusrlo/
+│
+├── config/
+│   ├── database.php
+│   └── config.php
+│
+├── public/
+│   ├── index.php
+│   ├── .htaccess
+│   │
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   ├── js/
+│   │   │   └── script.js
+│   │   └── images/
+│   │       └── covers/
+│   │
+│   └── uploads/
+│
+├── src/
+│   ├── controllers/
+│   │   ├── AuthController.php
+│   │   ├── AdminController.php
+│   │   ├── UserController.php
+│   │   ├── BookController.php
+│   │   └── LoanController.php
+│   │
+│   ├── models/
+│   │   ├── User.php
+│   │   ├── Book.php
+│   │   ├── Loan.php
+│   │   └── Category.php
+│   │
+│   ├── views/
+│   │   ├── layouts/
+│   │   │   ├── header.php
+│   │   │   ├── navbar.php
+│   │   │   └── footer.php
+│   │   │
+│   │   ├── auth/
+│   │   │   └── login.php
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── dashboard.php
+│   │   │   ├── books.php
+│   │   │   ├── book-form.php
+│   │   │   ├── users.php
+│   │   │   ├── user-form.php
+│   │   │   └── loans.php
+│   │   │
+│   │   └── user/
+│   │       ├── dashboard.php
+│   │       ├── catalog.php
+│   │       └── my-loans.php
+│   │
+│   └── helpers/
+│       ├── functions.php
+│       ├── validation.php
+│       └── session.php
+│
+├── database/
+│   └── perpusrlo.sql
+│
+└── .gitignore

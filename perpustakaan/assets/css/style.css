@@ -1,0 +1,191 @@
+/* ===================================================
+   AUTH — Login Page Stylesheet
+=================================================== */
+
+:root {
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --dark-start: #0f0f0f;
+  --dark-end: #1a1a1a;
+  --primary-start: #16a34a;
+  --primary-end: #15803d;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.25);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.auth-body {
+  background: linear-gradient(135deg, #0f0f0f 0%, #14532d 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+/* ── Card ── */
+.auth-card {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  max-width: 440px;
+  width: 100%;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Card Header ── */
+.auth-header {
+  background: linear-gradient(135deg, var(--dark-start), #14532d);
+  color: #fff;
+  padding: 35px 40px 30px;
+  text-align: center;
+  border-bottom: 3px solid #16a34a;
+}
+.auth-header .auth-icon {
+  font-size: 3rem;
+  color: #22c55e;
+  display: block;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+.auth-header h4 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+.auth-header small {
+  opacity: 0.65;
+  font-size: 0.85rem;
+  color: #bbf7d0;
+}
+
+/* ── Card Body ── */
+.auth-body {
+  padding: 35px 40px;
+  background: #fff;
+}
+.auth-body .form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+.auth-body .form-control {
+  padding: 11px 14px;
+  border: 1.5px solid #d1fae5;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+.auth-body .form-control:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+  outline: none;
+}
+
+/* ── Submit Button ── */
+.btn-auth {
+  background: linear-gradient(135deg, #16a34a, #0f0f0f);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+.btn-auth:hover {
+  opacity: 0.9;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+}
+.btn-auth:active {
+  transform: translateY(0);
+}
+
+/* ── Info Box ── */
+.auth-info-box {
+  background: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  border-radius: var(--radius-sm);
+  padding: 12px 15px;
+  font-size: 0.85rem;
+  color: #166534;
+  margin-top: 15px;
+}
+
+/* ── Divider ── */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin: 20px 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d1fae5;
+}
+.auth-divider span {
+  padding: 0 12px;
+}
+
+/* ── Password strength indicator ── */
+.password-strength {
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 6px;
+  transition: var(--transition);
+}
+.strength-weak {
+  background: #ef4444;
+  width: 33%;
+}
+.strength-medium {
+  background: #f59e0b;
+  width: 66%;
+}
+.strength-strong {
+  background: #22c55e;
+  width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .auth-header {
+    padding: 25px 25px 20px;
+  }
+  .auth-body {
+    padding: 25px;
+  }
+}
